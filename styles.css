@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fff9f5;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(to right, #ff6f61, #ff9966);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: #fff3e0;
+  padding: 1rem 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ff6f61;
+  font-weight: bold;
+}
+
+section {
+  padding: 3rem 2rem;
+  transition: all 0.6s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.service.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#marriage {
+  background-color: #ffe5ec;
+}
+
+#birthday {
+  background-color: #e0f7fa;
+}
+
+#photoshoot {
+  background-color: #e8f5e9;
+}
+
+#contact {
+  background-color: #f3e5f5;
+}
+
+.service {
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  background: white;
+}
+
+.service h2 {
+  color: #ff6f61;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background: #ff6f61;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}

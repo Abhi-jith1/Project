@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joyous Moments - Event Drop Servicing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Joyous Moments</h1>
+    <p>Your Ultimate Event Drop Servicing Partner</p>
+  </header>
+
+  <nav>
+    <a href="#marriage">Marriage</a>
+    <a href="#birthday">Birthday</a>
+    <a href="#photoshoot">Photoshoot</a>
+    <a href="#corporate">Corporate Events</a>
+    <a href="#babyshower">Baby Shower</a>
+    <a href="#concerts">Concerts</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="marriage" class="service">
+      <h2>Marriage Reception Planning</h2>
+      <p>We organize dream weddings with perfect decor, catering, venue setup, photography, and entertainment. You choose the package, we deliver the magic.</p>
+    </section>
+
+    <section id="birthday" class="service">
+      <h2>Birthday Parties</h2>
+      <p>Whether it’s a kid’s theme party or a classy 50th celebration, we handle everything — from cake and balloons to DJs and lighting.</p>
+    </section>
+
+    <section id="photoshoot" class="service">
+      <h2>Photoshoots</h2>
+      <p>Capture the essence of your moments with our curated photography services. We provide pro-level shoots for weddings, pre-weds, babies, and personal branding.</p>
+    </section>
+
+    <section id="corporate" class="service">
+      <h2>Corporate Events</h2>
+      <p>We organize conferences, product launches, and annual meets that reflect your brand's professionalism with a creative twist.</p>
+    </section>
+
+    <section id="babyshower" class="service">
+      <h2>Baby Showers</h2>
+      <p>Celebrate the joy of a new arrival with beautiful, heartfelt baby shower themes and complete event management.</p>
+    </section>
+
+    <section id="concerts" class="service">
+      <h2>Live Shows & Concerts</h2>
+      <p>From artists to sound systems, we manage live events, concerts, and cultural shows with full coordination and crowd engagement.</p>
+    </section>
+
+    <section id="contact" class="service">
+      <h2>Contact Us</h2>
+      <p>Want to plan your next event stress-free? Reach out at <strong>joyousmoments@example.com</strong> or call us at <strong>+91-9876543210</strong>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Joyous Moments. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth Scroll Navigation
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Intersection Observer Scroll Animation
+    const sections = document.querySelectorAll('.service');
+    const options = {
+      threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, options);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    // Interactive Hover Effects
+    sections.forEach(section => {
+      section.addEventListener('mouseover', () => {
+        section.style.transform = 'scale(1.02)';
+        section.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
+      });
+      section.addEventListener('mouseout', () => {
+        section.style.transform = 'scale(1)';
+        section.style.boxShadow = '0 0 15px rgba(0,0,0,0.1)';
+      });
+    });
+  </script>
+</body>
+</html>
